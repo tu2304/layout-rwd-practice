@@ -1,0 +1,139 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #1abc9c;
+}
+
+/* Container chính chứa Sidebar và Main Content */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+/* Sidebar trái */
+.sidebar {
+    flex: 1;
+    min-width: 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Các thẻ card con bên trong trang */
+.card-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 150px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* 📱 Responsive Web Design (RWD) với Media Queries cho thiết bị di động */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Chuyển bố cục ngang thành dọc trên màn hình nhỏ */
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
